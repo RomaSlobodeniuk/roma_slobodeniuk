@@ -39,72 +39,60 @@
 // и возвращает название дня недели. Используйте switch-case.
 
 //Solving:
-function dayOfWeek(x){
-	switch (x){
-		case 1:
-			a = 'Sunday';
-			break;
-		case 2:
-			a = 'Monday';
-			break;
-		case 3:
-			a = 'Tuesday';
-			break;
-		case 4:
-			a = 'Wednesday';
-			break;
-		case 5:
-			a = 'Thursday';
-			break;
-		case 6:
-			a = 'Friday';
-			break;
-		case 7:
-			a = 'Saturday';
-			break;
-		default:
-			a = 'Sir, You\'re an Idiot, it has beed said to enter the value in range [1,7]';
-		}
-	return a;
-}
-var a = prompt('enter the number from 1 to 7', "");
-console.log(dayOfWeek(parseInt(a)));
+// function dayOfWeek(x){
+// 	switch (x){
+// 		case 1:
+// 			a = 'Sunday';
+// 			break;
+// 		case 2:
+// 			a = 'Monday';
+// 			break;
+// 		case 3:
+// 			a = 'Tuesday';
+// 			break;
+// 		case 4:
+// 			a = 'Wednesday';
+// 			break;
+// 		case 5:
+// 			a = 'Thursday';
+// 			break;
+// 		case 6:
+// 			a = 'Friday';
+// 			break;
+// 		case 7:
+// 			a = 'Saturday';
+// 			break;
+// 		default:
+// 			a = 'Sir, You\'re an Idiot, it has beed said to enter the value in range [1,7]';
+// 		}
+// 	return a;
+// }
+// var a = prompt('enter the number from 1 to 7', "");
+// console.log(dayOfWeek(parseInt(a)));
 //-------------------------3. dayOfWeek----------------------------//
 
 
-//-------------------------4. charSum----------------------------//
-// Пользователь вводит целое положительное число m (prompt),
-// найти сумму цифр и вывести в консоль.
+//-------------------------4. calcBox----------------------------//
+// Создайте функцию, которая принимает в себя 3 аргумента и рассчитывает объем коробки.
 
 //Solving:
-// var a = 0;
-// for(var i = 0; i < 3; i++){
-// 	 var b = prompt('введите целое число');
-// 	 a += parseInt(b);
+// function calcBox(a, b, c){
+// 	return a*b*c;
 // }
-// console.log(a);
+// console.log('the result is: ' + calcBox(4,4,5));
+//-------------------------4. calcBox----------------------------//
 
-//-------------------------4. charSum----------------------------//
 
-
-//-------------------------5. Prime number----------------------------//
-// Пользователь вводит целое положительное число m (prompt),
-// является ли число m простым? Результат вывести в консоль.
+//-------------------------5. hmsToSecs----------------------------//
+// Напишите функцию hmsToSecs, имеющую три аргумента h, m, s. Функция должна
+// возвращать эквивалент переданного ей временного значения в секундах.
+// Создайте программу, которая будет циклически запрашивать у пользователя
+// ввод значения часов, минут и секунд и выводить результат работы функции на экран.
 
 //Solving:
 
-// for(var i = 0; i < 3; i++){
-// 	var b = prompt('введите целое число');
-// 	var c = String(b);
-// 	if(c.length > 1 && c != ''){
-// 		console.log('the number ' + b + ' is NOT simple');
-// 	} else if(c.length == 1 && c != '') {
-// 		console.log('the number ' + b + ' is simple');
-// 	} else if(c == ''){
-// 		console.log('you have entered an empty string');
-// 	}
-// }
-//-------------------------5. Prime number----------------------------//
+
+//-------------------------5. hmsToSecs----------------------------//
 
 
 //-------------------------6. Sausagefest----------------------------//
