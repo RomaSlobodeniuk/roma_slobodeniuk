@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Testing</title>
-    <script src="home-work-3.js"></script>
+    <script src="home-work-6.1.js"></script>
 </head>
 <body>
 <script></script>
