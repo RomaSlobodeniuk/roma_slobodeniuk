@@ -228,27 +228,44 @@
 // Создайте строку randomStr(100). Разбейте эту строку на отдельные слова случайной длины и выведите в консоль.
 
 //Solving:
-function getRandomArbitrary(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function randomStr(n) {
-    var str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoP pQqRrSsTtUuVvWwXxYyZz0123456789';
-    var randStr = '';
-    for (var i = 0; i < n; i++){
-        randStr += str[getRandomArbitrary(0, (str.length - 1))];
-    }
-    return randStr;
-}
-
-var randString100 = randomStr(100);
-var array = [];
-for (var b = 0; b < randString100.length; b++){
-    // array.push(randString100.slice())
-}
-
-console.log(randomStr(100));
+// function getRandomArbitrary(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+//
+// function randomStr(n) {
+//     var str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoP pQqRrSsTtUuVvWwXxYyZz0123456789';
+//     var randStr = '';
+//     for (var i = 0; i < n; i++){
+//         randStr += str[getRandomArbitrary(0, (str.length - 1))];
+//     }
+//     return randStr;
+// }
+//
+// var randString100 = randomStr(100);
+// var array = [];
+// var the_splitted_string = '';
+// for (var b = 0; b < randString100.length; ){
+//     console.log('b = ' + b);
+//     let randNum = getRandomArbitrary(b, 100);
+//     console.log('randNum = ' + randNum);
+//     the_splitted_string += randString100.slice(b, randNum) + '--';
+//     b += (randNum - b);
+// }
+// the_splitted_string = the_splitted_string.slice(0, the_splitted_string.length - 2);
+//
+// console.log(the_splitted_string);
 //----------10. sliceKingdom (с анг. slices - скибочки:)---------------//
+
+
+//----------11. subKingdom---------------//
+// Используя результаты задания 10:
+// - Выведите в консоль подстроку с 6 по 20 символ включительно
+// - Выведите в консоль подстроку начиная с 3 символа, длиной 8 символов
+
+
+//Solving:
+
+//----------11. subKingdom---------------//
 
 
 
