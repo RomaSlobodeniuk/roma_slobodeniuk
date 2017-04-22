@@ -233,7 +233,7 @@
 // }
 //
 // function randomStr(n) {
-//     var str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoP pQqRrSsTtUuVvWwXxYyZz0123456789';
+//     var str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
 //     var randStr = '';
 //     for (var i = 0; i < n; i++){
 //         randStr += str[getRandomArbitrary(0, (str.length - 1))];
@@ -252,7 +252,7 @@
 //     b += (randNum - b);
 // }
 // the_splitted_string = the_splitted_string.slice(0, the_splitted_string.length - 2);
-//
+
 // console.log(the_splitted_string);
 //----------10. sliceKingdom (с анг. slices - скибочки:)---------------//
 
@@ -264,8 +264,103 @@
 
 
 //Solving:
-
+// function getRandomArbitrary(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+// }
+// function randomStr(n) {
+//     var str = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789';
+//     var randStr = '';
+//     for (var i = 0; i < n; i++){
+//         randStr += str[getRandomArbitrary(0, (str.length - 1))];
+//     }
+//     return randStr;
+// }
+// function split_str_by_splitter(boundary){
+//     var randString100 = randomStr(100);
+//     var the_split_string = '';
+//     for (var b = 0; b < randString100.length; ){
+//         let randNum = getRandomArbitrary(b, 100);
+//         the_split_string += randString100.slice(b, randNum) + boundary;
+//         b += (randNum - b);
+//     }
+//     return the_split_string.slice(0, the_split_string.length - boundary.length);
+// }
+//
+// var str = split_str_by_splitter('/--/');
+//
+// console.log('Random string = "' + str + '"');
+// console.log('The substring from 6th to 20th position, including the last one = "' + str.slice(6, (20+1)) + '"');
+// console.log('The substring in size of 8 symbols from the 3rd position = "' + str.substr(3, 8) + '"');
 //----------11. subKingdom---------------//
+
+
+//----------12. phoneNumber---------------//
+// Дано телефонный номер в формате "0682091234".
+// Нужно его преобразовать в формат "+38 (068) 209-12-34".
+// Создайте функцию, которая выполняет эту задачу.
+
+//Solving:
+// function phoneTypeConversion(phone_number) {
+//     var phone_str = '' + phone_number;
+//     return '+38 (' + phone_str.slice(0, 3) + ') ' + phone_str.slice(3, 6) + '-' + phone_str.slice(6, 8) + '-' + phone_str.slice(8, 10);
+// }
+// console.log(phoneTypeConversion("0682091234"));
+//----------12. phoneNumber---------------//
+
+
+//----------13. myTrim---------------//
+// Функция Trim обрезает пробельные символы в начале и в конце строки. Часть стандарта ECMAScript 5,
+// но функции trimLeft() и trimRight() не стандартизированы. Напишите свои реализации trimLeft(str) и trimRight(str):
+// - trimLeft - Обрезает пробельные символы с левой стороны строки
+// - trimRight - Обрезает пробельные символы с правой стороны строки.
+
+//Solving:
+// function trimLeft(str) {
+//     var checking_value = 0;
+//     for (var i = 0; i < str.length; i++){
+//         if(str[i] === ' '){
+//             checking_value = i;
+//         } else if (str[i] !== ' '){
+//             return str.slice(i, str.length);
+//         }
+//     }
+//     if (checking_value === str.length - 1){
+//         return 'Your string consists of spaces!';
+//     } else if (checking_value === 0){
+//         return 'Your string is empty!';
+//     }
+// }
+// var strToLeftTrim = '   This is the string which we must to trim starting from the left side...';
+// console.log('The initial string we are going to trim = "' + strToLeftTrim + '"');
+// console.log('My left trimmed string = "' + trimLeft(strToLeftTrim) + '"');
+//
+// function trimRight(str) {
+//     var reversed_str = str.split("").reverse().join("");
+//     reversed_str = trimLeft(reversed_str);
+//     return reversed_str.split("").reverse().join("");
+// }
+// var strToRightTrim = 'This is the string which we must to trim starting from the end   ';
+// console.log('The initial string we are going to trim = "' + strToRightTrim + '"');
+// console.log('My right trimmed string = "' + trimRight(strToRightTrim) + '"');
+//----------13. myTrim---------------//
+
+
+//----------14. indexOfAll---------------//
+// Напишите функцию indexOfAll(base, str), которая возвращает список всех вхождений str в строке base
+
+//Solving:
+// var str = 'the steing here';
+// var substr = 'e';
+// var array = [];
+// for (var i = 0; i < str.length; i++) {
+//     let the_entry = str.indexOf(substr, i);
+//     array.push(the_entry);
+//     i = the_entry + 1;
+// }
+// console.log(array);
+//----------14. indexOfAll---------------//
+
+
 
 
 
